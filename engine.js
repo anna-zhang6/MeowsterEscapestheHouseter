@@ -6,6 +6,8 @@ class Engine {
 
     constructor(firstSceneClass, storyDataUrl) {
 
+        this.inventory = [];
+
         this.firstSceneClass = firstSceneClass;
         this.storyDataUrl = storyDataUrl;
 
@@ -27,6 +29,9 @@ class Engine {
         this.scene = new sceneClass(this);
         this.scene.create(data);
     }
+
+    hasItem(id) { return this.inventory.includes(id); }
+    addItem(id)  { if (!this.hasItem(id)) this.inventory.push(id); }
 
     addChoice(action, data) {
         let button = this.actionsContainer.appendChild(document.createElement("button"));

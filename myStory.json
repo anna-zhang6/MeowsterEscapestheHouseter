@@ -1,58 +1,126 @@
 {
-    "Title": "Campus Life on the West Side",
+    "Title": "Meowster Escapes the Houseter",
     "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "InitialLocation": "Front Porch",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Front Porch": {
+            "Body": "Meow! You are sitting on the front porch facing the door with a sign that says 'DEMOLITION PENDING FIVE DAYS'. You need to get out of here before this old abandoned house is demolished, or you'll be gone along with the house! My oh my, but you notice fur; you feel warm and... abnormally short. Just what have you become? Paws, a nice fur coat, a stunning tail, and a collar around your neck; you're a cat! 'meeeowwwww'~ ",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
+                    "Text": "Through the cat door",
+                    "Target": "Living Room"
+                },
+                {
+                    "Text": "Out to the road",
+                    "Target": "Main Gate"
                 }
             ]
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+        "Living Room": {
+            "Body": "You slide into the cat door and enter the living room. Old and rusty, but it has it's charm. You look around this room once filled with life.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "South",
+                    "Target": "Front Porch"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
+                    "Text": "Out the back door",
+                    "Target": "Backyard"
+                },
+                {
+                    "Text": "Up",
+                    "Target": "Staircase"
+                },
+                {
+                    "Text": "Right Door",
+                    "Target": "Garage",
+                    "requires": "key1"
                 }
             ]
         },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
+        "Main Gate": {
+            "Body": "The towering gates stand before you. It's inpenetrible. But there's a keyhole!",
             "Choices": [
                 {
                     "Text": "North",
-                    "Target": "Porter"
+                    "Target": "Front Porch"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
+                    "Text": "Open the Gate",
+                    "Target": "Beyond",
+                    "requires": "key2"
                 }
             ]
         },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
+        "Backyard": {
+            "Body": "A luscius green backyard with some amazing scenery! Seems like you were an explorer, there's a small cat hut and food bowls outside. But wait, there's also a huge beautiful pond!",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "Back in",
+                    "Target": "Living Room"
+                }
+            ],
+            "Items": [
+                {
+                    "id": "floatie",
+                    "Text": "Grab the floatie",
+                    "description": "You hop on the rubber floatie. It squeaks." 
+                },
+                { 
+                    "id": "key1",
+                    "Text": "Dive for the key",
+                    "description": "You paddle over and fish out a brass key!",
+                    "requires": "floatie"
+                }
+            ]
+        },
+        "Staircase": {
+            "Body": "You walk up the staircase and see photos and more photos hanging on the wall. Photos of you, the cat, as part of this family. One where you were just a baby, and one on your third birthday!",
+            "Choices": [
+                {
+                    "Text": "Down",
+                    "Target": "Living Room"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Up",
+                    "Target": "Master Bedroom"
+                }
+            ]
+        },
+        "Garage": {
+            "Body": "It's dark and dusty in here with so many random things scattered all over the place from excersise equipment to old matresses.",
+            "Choices": [
+                {
+                    "Text": "Back in",
+                    "Target": "Living Room"
+                }
+            ],
+            "Items": [
+                { 
+                    "id": "key2",
+                    "Text": "Look under the mat",
+                    "description": "You find another key... what does this unlock?"
+                }
+            ]
+        },
+        "Master Bedroom": {
+            "Body": "It's dark and dusty in here with so many random things scattered all over the place from excersise equipment to old matresses.",
+            "Choices": [
+                {
+                    "Text": "Down",
+                    "Target": "Staircase"
+                }
+            ],
+            "Items": [
+                { 
+                    "id": "Catbed",
+                    "Text": "Lay in the cat bed",
+                    "description": "zzz...zzzzzzz...you doze off. Memories come to mind~ sleeping with your human family and the love that you shared with them, playing with them and your favorite cat toy, an orange slinky worm. But the memories dissapate and you open your eyes again"
                 }
             ]
         },
         "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+            "Body": "Purrr-fect! The door has opened and you have escaped demolition. Cats are a very wholesome addition to family life and it means a lot to the cat and the human! ₍^. .^₎⟆"
         }
     }
 }
